@@ -1,0 +1,224 @@
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	font-weight: normal;
+}
+html{
+  height: 100%;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  height: 100%;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a, button{
+	text-decoration: none;
+	outline: none;
+	color: inherit;
+	-webkit-tap-highlight-color: transparent;
+}
+*, *::after, *::before{
+	box-sizing: border-box;
+}
+/*  */
+body{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.wrapper{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #C0DBD9;
+}
+.container{
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+.header{
+  margin-bottom: 15px;
+}
+.header__inner{
+  background-color: #7FAFF6;
+  padding: 30px;
+  display: flex;
+  justify-content: start;
+}
+.btn{
+  width: 205px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #A5C7F9;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+  font-family: inherit;
+}
+.main{
+  flex: 1 1 auto;
+}
+.grid{
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr;
+  grid-template-rows: repeat(2, 198px);
+  background-color: #B3F95A;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.grid__element{
+  background-color: #8AD191;
+  position: relative;
+}
+.grid__element::before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 198px;
+  font-size: 53px;
+  color: #fff;
+}
+.grid__element_1::before{
+  content: '1';
+}
+.grid__element_2::before{
+  content: '2';
+}
+.grid__element_3::before{
+  content: '3';
+}
+.grid__element_4::before{
+  content: '4';
+}
+.grid__element_5::before{
+  content: '5';
+}
+
+.grid__element_4{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.flex{
+  display: flex;
+  background-color: #88B5BF;
+  padding: 30px;
+  justify-content: space-between;
+}
+.flex__element{
+  background-color: #0D89B0;
+  width: 255px;
+  height: 199px;
+  margin-right: 30px;
+  padding-bottom: 17%;
+}
+.flex__element:last-child{
+  margin: 0;
+}
+.footer__inner{
+  height: 100px;
+  width: 100%;
+  background-color: #7FAFF6;
+}
+/* pop up */
+.modal{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s;
+}
+.modal:target{
+  opacity: 1;
+  visibility: visible;
+}
+.modal__body{
+  min-height: 100%;
+  padding: 30px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s;
+  opacity: 0;
+  transform: translate(0, -100%);
+}
+.modal:target .modal__body{
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.pop_up{
+  max-width: 400px;
+  width: 400px;
+  height: 400px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 53px;
+}
+.close_pop_up{
+  width: 43px;
+  height: 39px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #fff;
+  background-color: #7FAFF6;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 39px;
+  text-align: center;
+}
